@@ -1,0 +1,8 @@
+{
+    "applicationName" : "myapp",
+    "applicationId": "b5qr0q8kdt3nxex1oltn9fljmcb9v5b092y3603g4p9gxw1t",
+    "applicationKey": "jp8v3lppl2pgz9t2x8kemr45gc1dbhe9zlfoetphjx03d3rc",
+    "global": {
+        "avVersion": "0.3.1"
+    }
+}

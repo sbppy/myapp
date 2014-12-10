@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!--<script src="//www.atatus.com/atatus.js"></script>-->
+  <!--<script type="text/javascript"> atatus.init('5b1b6b41-d305-4444-9b00-6bb910cbc356').attach(); </script>-->
+
+  <!-- endbuild -->
+</head>
+<body ng-app="betaApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="container" ng-controller="MainCtrl" ng-init="init()">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li><a ng-href="#/watched">我的关注</a></li>
+      <li><a ng-href="#/rank">排行榜</a></li>
+      <li><a ng-href="#/search">搜索</a></li>
+      <li><a ng-href="#/news">新闻</a></li>
+      <li ng-show="$root.currentUser">
+        <a ng-href="#/me">{{$root.currentUser.username}}</a>
+      </li>
+      <li ng-show="$root.currentUser">
+        <a ng-click="logout()">登出</a>
+      </li>
+    </ul>
+    <h3 class="text-muted">Techhack</h3>
+  </div>
+
+  <div ng-view></div>
+
+  <div class="footer">
+    <p><span class="glyphicon glyphicon-heart"></span> from the techhack team</p>
+  </div>
+</div>
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/chartjs/Chart.min.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/av-0.4.5.min/index.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/watched.js"></script>
+<script src="scripts/controllers/rank.js"></script>
+<script src="scripts/controllers/search.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/services/dataservice.js"></script>
+<script src="scripts/services/userservice.js"></script>
+<script src="scripts/services/leancloud.js"></script>
+<script src="scripts/services/productcache.js"></script>
+<script src="scripts/controllers/product.js"></script>
+<script src="scripts/controllers/news.js"></script>
+<script src="scripts/controllers/me.js"></script>
+<!-- endbuild -->
+</body>
+</html>

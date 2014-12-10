@@ -1,0 +1,1 @@
+<div ng-init="init()"> <h3>产品搜索</h3> <input ng-model="query.name" placeholder="search"> <div class="btn btn-primary" ng-click="search()">Search</div> <div id="searchResults"> <div>{{results.length}}</div> <div ng-repeat="result in results"> <a ng-href="#/product/{{result.id}}"> {{result.name}} </a> </div> </div> </div>
